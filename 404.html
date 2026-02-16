@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Redirecting...</title>
+    <script type="text/javascript">
+      // Your repo name (since it's deployed under /hasham_dev)
+      var repoName = "/hasham_dev";
+      var redirectTo = window.location.pathname;
+      var origin = window.location.origin;
+
+      // Redirect to index.html but preserve full path
+      window.location.replace(
+        origin + repoName + "/index.html?redirect=" +
+        encodeURIComponent(redirectTo + window.location.search + window.location.hash)
+      );
+    </script>
+  </head>
+  <body>
+    <p>Redirecting...</p>
+  </body>
+</html>
